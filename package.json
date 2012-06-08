@@ -1,0 +1,14 @@
+{ "name": "bv"
+, "version": "0.0.1"
+, "description": "bump version and publish in one easy command."
+, "homepage": "http://github.com/dominictarr/bumpv"
+, "repository": 
+  { "type": "git"
+  , "url": "https://github.com/dominictarr/bumpv.git" }
+, "dependencies": {}
+, "devDependencies": {}
+, "author": "Dominic Tarr <dominic.tarr@gmail.com> (dominictarr.com)" 
+, "bin": {
+    "bv": "./index.js"
+  }
+}
