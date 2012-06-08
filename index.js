@@ -72,9 +72,9 @@ if (!module.parent) {
   //considered putting this into a bash script, but would have to pass the version out some how.
   //probably monkeying around with regexps.
 
-  exec('git commit package.json -m '+v2, function () {
-    exec('git tag -a '+v2 + ' -m ' + v2, function () {
-      exec('git push origin master & npm publish', function () {
-        console.log('bumped version to: ' + v2)        
-  })})})
+  exec('git commit package.json -m '+v2 , false , function () {
+    exec('git tag -a '+v2 + ' -m ' + v2 , argv.t, function () {
+      exec('git push origin master'     , argv.g, function () {})
+      exec('npm publish'                , argv.n, function () {})
+  })})
 }
