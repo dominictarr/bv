@@ -1,5 +1,5 @@
 { "name": "bv"
-, "version": "0.0.1"
+, "version": "0.0.3"
 , "description": "bump version and publish in one easy command."
 , "homepage": "http://github.com/dominictarr/bumpv"
 , "repository": 
@@ -7,8 +7,8 @@
   , "url": "https://github.com/dominictarr/bumpv.git" }
 , "dependencies": {
     "semver"  : "~0.3.4"
-    "jsup"    : "~0.0.1"
-    "optimist": "~0.3.4"
+  , "jsup"    : "~0.0.1"
+  , "optimist": "~0.3.4"
   }
 , "devDependencies": {}
 , "author": "Dominic Tarr <dominic.tarr@gmail.com> (dominictarr.com)" 
