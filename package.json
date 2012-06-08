@@ -6,7 +6,7 @@
   { "type": "git"
   , "url": "https://github.com/dominictarr/bumpv.git" }
 , "dependencies": {
-    "semver"  : "~0.3.4"
+    "semver"  : "~1.0.14"
   , "jsup"    : "~0.0.1"
   , "optimist": "~0.3.4"
   }
