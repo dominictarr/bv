@@ -1,10 +1,10 @@
 { "name": "bv"
 , "version": "0.0.6"
 , "description": "bump version and publish in one easy command."
-, "homepage": "http://github.com/dominictarr/bumpv"
+, "homepage": "http://github.com/dominictarr/bv"
 , "repository": 
   { "type": "git"
-  , "url": "https://github.com/dominictarr/bumpv.git" }
+  , "url": "https://github.com/dominictarr/bv.git" }
 , "dependencies": {
     "semver"  : "~1.0.14"
   , "jsup"    : "~0.0.1"
