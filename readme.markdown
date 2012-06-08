@@ -20,13 +20,15 @@ bv M      # go back to ruby
 
 bv        # defaults to `patch`
 
-#other options
-
-bv -s     # show output and exit
-bv -n     # do not publish
-
-# if neither of these options are provided, 
-# bv will finish up by running `git push origin master & npm publish`
 ```
+by default, `bv` will commit the bump, tag it, git push, and npm publish.
+each of these steps may be skipped.
+```
+bv -s     # show output and exit
+bv -c     # do not commit
+bv -t     # do not tag
+bv -n     # do not npm publish
+bv -g     # do not git push
 
+```
 
