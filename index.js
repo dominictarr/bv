@@ -71,10 +71,11 @@ if (!module.parent) {
   //this is what I would do manually.
   //considered putting this into a bash script, but would have to pass the version out some how.
   //probably monkeying around with regexps.
+  var m = argv.m || v2
 
-  exec('git commit package.json -m '+v2 , false , function () {
-    exec('git tag -a '+v2 + ' -m ' + v2 , argv.t, function () {
-      exec('git push origin master'     , argv.g, function () {})
-      exec('npm publish'                , argv.n, function () {})
+  exec('git commit package.json -m "'+m+'"' , false , function () {
+    exec('git tag -a '+v2 + ' -m "'+m+'"'   , argv.t, function () {
+      exec('git push origin master'         , argv.g, function () {})
+      exec('npm publish'                    , argv.n, function () {})
   })})
 }

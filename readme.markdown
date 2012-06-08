@@ -29,6 +29,10 @@ bv -c     # do not commit
 bv -t     # do not tag
 bv -n     # do not npm publish
 bv -g     # do not git push
+```
+by default, the commit message is the new version. set it manually with `-m`
 
+```
+bv -m message    # set message manually, 
 ```
 
