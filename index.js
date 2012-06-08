@@ -62,6 +62,7 @@ if (!module.parent) {
     return
   
   function exec(cmd, skip, next) {
+    if(!next) next = skip, skip = null
     if(skip) return next()
     var c =cp.exec(cmd, next)
     c.stdout.pipe(process.stdout, {end: false})
@@ -74,6 +75,6 @@ if (!module.parent) {
   exec('git commit package.json -m '+v2, function () {
     exec('git tag -a '+v2 + ' -m ' + v2, function () {
       exec('git push origin master & npm publish', function () {
-        console.log('bumped version to' + v2)        
+        console.log('bumped version to: ' + v2)        
   })})})
 }
