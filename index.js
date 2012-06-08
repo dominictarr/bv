@@ -42,6 +42,7 @@ if (!module.parent) {
   var fs     = require('fs')
   var jsup   = require('jsup')
   var argv   = require('optimist').argv
+  var cp     = require('child_process')
 
   var p = fs.readFileSync('./package.json', 'utf8')
   var pkg1 = JSON.parse(p)
@@ -59,10 +60,20 @@ if (!module.parent) {
   fs.writeFileSync('./package.json', pup) 
   if(argv.n)
     return
-  var c = 
-  require('child_process')
-    .exec('git push origin master & npm publish')
-  c.stdout.pipe(process.stdout, {end: false})
-  c.stderr.pipe(process.stderr, {end: false})
+  
+  function exec(cmd, skip, next) {
+    if(skip) return next()
+    var c =cp.exec(cmd, next)
+    c.stdout.pipe(process.stdout, {end: false})
+    c.stderr.pipe(process.stderr, {end: false})
+  }
+  //this is what I would do manually.
+  //considered putting this into a bash script, but would have to pass the version out some how.
+  //probably monkeying around with regexps.
 
+  exec('git commit package.json -m '+v2, function () {
+    exec('git tag -a '+v2 + ' -m ' + v2, function () {
+      exec('git push origin master & npm publish', function () {
+        console.log('bumped version to' + v2)        
+  })})})
 }
