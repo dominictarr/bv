@@ -1,5 +1,5 @@
 { "name": "bv"
-, "version": "0.0.7"
+, "version": "0.0.8"
 , "description": "bump version and publish in one easy command."
 , "homepage": "http://github.com/dominictarr/bv"
 , "repository": 
