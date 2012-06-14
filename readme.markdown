@@ -2,6 +2,10 @@
 
 bump the version of a npm project with one easy command.
 
+turns out npm already does this. `npm version patch|minor|major`
+
+[npm version](http://npmjs.org/doc/version.html)
+
 ```
 npm install bv
 ```
