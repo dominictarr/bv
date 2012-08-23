@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/dominictarr/bv.png)](http://travis-ci.org/dominictarr/bv)
 #bump version
 
 bump the version of a npm project with one easy command.
